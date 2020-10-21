@@ -1,0 +1,195 @@
+.section-coop {
+  padding: 170px 0 77px 0;
+  background-image: linear-gradient(
+    360deg,
+    #3c1f78 -18.52%,
+    rgba(60, 31, 120, 0) 50%
+  );
+  &__container {
+    max-width: 1340px;
+  }
+  &-content {
+    display: flex;
+    justify-content: flex-end;
+    &-text {
+      &-wrap {
+        margin-right: 70px;
+        position: relative;
+      }
+      &__dots {
+        position: absolute;
+      }
+      &-lines {
+        margin-top: 81px;
+        width: 194px;
+        margin-left: auto;
+        &__line {
+          background: #8151ff;
+          &--short {
+            left: -40px;
+            position: relative;
+          }
+          &--long {
+            margin-top: 30px;
+            width: 194px;
+          }
+        }
+      }
+      &__title {
+        position: relative;
+        right: -150px;
+        margin-top: 42px;
+        line-height: 60px;
+        z-index: 2;
+      }
+      &__line--medium {
+        margin-top: 40px;
+        margin-left: auto;
+        width: 128px;
+        height: 1px;
+        background: #8151ff;
+      }
+    }
+    &-form {
+      max-width: 483px;
+      &-wrap {
+        width: 791px;
+        height: 702px;
+        position: relative;
+        z-index: 1;
+      }
+      &-inner {
+        padding: 95px 0 0 195px;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, #1b1b20 16.49%, #100b43 116.01%);
+      }
+      &-item-wrap {
+        margin-top: 30px;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+      &__label,
+      &-field {
+        display: block;
+        @include font-roboto;
+      }
+      &__label {
+        font-size: 18px;
+        color: white;
+      }
+      &-field {
+        font-weight: 400;
+        width: 100%;
+        margin-top: 15px;
+        background: #ffffff;
+        border: none;
+        outline: none;
+        &-input {
+          height: 50px;
+        }
+        &-textarea {
+          height: 127px;
+          resize: none;
+        }
+      }
+      &__button {
+        display: block;
+        margin: 55px 0 0 auto;
+      }
+      &-circle--blur-pink,
+      &-circle--blur-gradient,
+      &-circle--blur-arbitrary {
+        position: absolute;
+        z-index: -1;
+      }
+      &-circle--blur-pink {
+        top: -400px;
+        right: -100px;
+      }
+      &-circle--blur-gradient {
+        left: -300px;
+        top: -239px;
+      }
+      &-circle--blur-arbitrary {
+        right: -378px;
+        top: -305px;
+      }
+      &-circle--fill {
+        position: absolute;
+        z-index: -2;
+        right: -107px;
+        top: -78px;
+      }
+      &__dots {
+        position: absolute;
+        right: -53px;
+        bottom: 0;
+        z-index: -1;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1477px) {
+  .section-coop-content {
+    margin: 0 20px;
+  }
+  .section-coop-content-text-wrap {
+    margin-right: 103px;
+  }
+  .section-coop-content-form-wrap {
+    width: 700px;
+  }
+  .section-coop-content-form-inner {
+    padding-left: 103px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .section-coop-content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .section-coop-content-text__title {
+    margin-bottom: 30px;
+  }
+  .section-coop-content-text__line--medium {
+    display: none;
+  }
+}
+@media screen and (max-width: 793px) {
+  .section-coop-content-form-wrap {
+    width: 500px;
+  }
+  .section-coop-content-form {
+    max-width: 285px;
+  }
+  .section-coop-content-form-inner {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 550px) {
+  .section-coop {
+    padding-top: 70px;
+    background-image: none;
+  }
+  .section-coop__container {
+    padding: 0;
+  }
+  .section-coop-content {
+    margin: 0;
+  }
+  .section-coop-content-text-wrap {
+    margin-right: 0;
+  }
+  .section-coop-content-text__title {
+    position: static;
+  }
+  .section-coop-content-form-circle--fill {
+    display: none;
+  }
+}

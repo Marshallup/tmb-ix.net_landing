@@ -1,0 +1,193 @@
+.section-services {
+  padding-top: 40px;
+  // overflow: hidden;
+  .container-services {
+    max-width: 2040px;
+  }
+  &-bg-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    position: relative;
+    &__graphs {
+      position: absolute;
+      z-index: 1;
+      top: 85px;
+      left: 184px;
+    }
+    &__blur {
+      position: absolute;
+      z-index: 0;
+      top: -126px;
+      left: -100px;
+    }
+  }
+  &-text-block {
+    position: absolute;
+    top: 59px;
+    left: 58%;
+    &__title {
+      font-size: 30px;
+      letter-spacing: 0.02em;
+    }
+    &-content {
+      &-wrap {
+        margin-top: 26px;
+      }
+      &__line {
+        width: 553.65px;
+        height: 2px;
+        background-color: #8151ff;
+        position: relative;
+        &::before {
+          content: "";
+          display: block;
+          width: 57px;
+          position: absolute;
+          top: 38px;
+          left: -46px;
+          border-top: 2px solid #8151ff;
+          transform: rotate(-41deg);
+          transform-origin: 0% 0%;
+        }
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 119px;
+          height: 7px;
+          // background: #8151ff;
+          background: linear-gradient(45deg, transparent 7px, #8151ff 1px);
+        }
+      }
+      &-list {
+        margin: 33px 0 70px 0 !important;
+        &__item {
+          max-width: 420px;
+          margin-bottom: 16px;
+          @include font-exo2;
+        }
+        &__link {
+          color: #ffffff;
+          display: flex;
+          align-items: flex-start;
+          font-weight: 500;
+          font-size: 22px;
+          color: #ffffff;
+          transition: color 0.5s ease;
+          &::before {
+            content: "";
+            margin: 3px 14px 0 0;
+            display: inline-block;
+            min-width: 25px;
+            height: 26px;
+            background: url("../img/icons/cross-list.png") center center/cover
+              no-repeat;
+            transition: all 0.5s ease;
+          }
+          &:hover::before {
+            transform: rotate(360deg);
+          }
+          &:hover {
+            color: #8151ff;
+            text-shadow: 0px 0px 14px #8151ff;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1830px) {
+  .section-services-text-block {
+    left: auto;
+    right: 100px;
+  }
+}
+@media screen and (max-width: 1672px) {
+  .section-services-bg-block__graphs {
+    left: 0;
+  }
+}
+@media screen and (max-width: 1524px) {
+  .section-services-bg-block__graphs {
+    width: 600px;
+    left: 99px;
+    top: 144px;
+  }
+}
+@media screen and (max-width: 1348px) {
+  .section-services-bg-block__dots {
+    display: none;
+  }
+  .section-services-text-block {
+    &-content__line {
+      width: 380px;
+    }
+  }
+}
+@media screen and (max-width: 1215px) {
+  .section-services {
+    position: relative;
+    padding-bottom: 30px;
+    // height: 700px;
+    &-bg-block {
+      justify-content: center;
+    }
+  }
+  .section-services-bg-block__block-dots-lines {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+  }
+  .section-services-bg-block__graphs {
+    margin-top: 20px;
+    position: relative;
+    width: 500px;
+    top: 30px;
+    left: 0;
+    order: 2;
+  }
+  .section-services-bg-block__blur {
+    display: none;
+  }
+  .section-services-text-block {
+    position: relative;
+    left: auto;
+    right: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-content-wrap {
+      margin-left: 50px;
+    }
+    &-content__line {
+      width: 290px;
+    }
+    &-content-list {
+      margin: 16px 0 34px 0 !important;
+    }
+    &-content-list__link {
+      font-size: 18px;
+    }
+  }
+}
+@media screen and (max-width: 550px) {
+  .section-services-bg-block__block-dots-lines {
+    display: none;
+  }
+  .section-services-text-block-content__line {
+    width: 263px;
+  }
+  .section-services-text-block-content-list__item {
+    font-size: 15px;
+  }
+  .section-services-text-block {
+    margin-top: -30px;
+  }
+}

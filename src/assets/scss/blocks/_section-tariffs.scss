@@ -1,0 +1,191 @@
+.section-tariffs {
+  padding: 176px 0 80px 0;
+  // overflow-y: hidden;
+  &-content {
+    &-wrap {
+      width: 1400px;
+      height: 744px;
+      position: relative;
+      z-index: 1;
+      margin: 0 auto;
+    }
+    &-inner {
+      position: relative;
+      z-index: 1;
+      padding: 81px 57px 0 86px;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(354.98deg, #0e0c16 45.12%, #110c2f 107.82%);
+      display: flex;
+      justify-content: space-between;
+    }
+    &-circle--normal {
+      position: absolute;
+      z-index: -1;
+      top: -300px;
+      // width: 900px;
+      // height: 700px;
+      left: -403px;
+    }
+    &-circle--big {
+      bottom: -500px;
+      position: absolute;
+      right: -671px;
+      // width: 700px;
+    }
+    &-circle--small {
+      position: absolute;
+      right: -334px;
+      top: 39px;
+      // width: 600px;
+    }
+    &-cards {
+      display: flex;
+      &-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &-text {
+          margin-left: 30px;
+          &__title {
+            @include font-play;
+            text-transform: uppercase;
+            font-weight: 700;
+          }
+          &__subtitle {
+            margin-top: 6px;
+            @include font-exo2;
+          }
+        }
+        &__cost {
+          display: block;
+          margin: 0 auto;
+        }
+        &__bg-lines {
+          position: absolute;
+          bottom: -60px;
+          left: -60px;
+          z-index: -1;
+        }
+        &-wrap--blue {
+          margin: 145px 40px 0 0;
+          width: 279px;
+          height: 294px;
+          position: relative;
+          z-index: 1;
+        }
+        &--blue {
+          padding: 38px 0;
+          width: 100%;
+          height: 100%;
+          background: #3501cb;
+          .section-tariffs-content-cards-card-text__title,
+          .section-tariffs-content-cards-card-text__subtitle {
+            color: white;
+          }
+        }
+      }
+    }
+    &-lines {
+      position: absolute;
+      right: 9px;
+      bottom: -18px;
+      transform: translateY(100%);
+      &__long,
+      &__short {
+        background: #bf00de;
+      }
+      &__short {
+        position: absolute;
+        right: -36px;
+      }
+    }
+  }
+}
+.section-tariffs-content-cards-card--white {
+  padding: 23px 0;
+  width: 208px;
+  height: 212px;
+  background: #fffbfb;
+  .section-tariffs-content-cards-card-text__title,
+  .section-tariffs-content-cards-card-text__subtitle {
+    color: #584f75;
+  }
+}
+.section-tariffs-content-cards-card--gradient {
+  margin-top: 45px;
+  position: relative;
+  padding: 59px 0 35px 0;
+  z-index: 1;
+  width: 323px;
+  height: 331px;
+  .section-tariffs-content-cards-card-text__title,
+  .section-tariffs-content-cards-card-text__subtitle {
+    color: white;
+  }
+  .section-tariffs-content-cards-card__bg--gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(33.5deg, #3500cb 25.98%, #d204d7 86.8%);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+}
+@media screen and (max-width: 1477px) {
+  .section-tariffs-content-wrap {
+    max-width: 1070px;
+    // height: auto;
+    min-height: 744px;
+    width: auto;
+  }
+  .section-tariffs-content-inner {
+    // min-height: 100%;
+    padding: 56px 37px 0 37px;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1003px) {
+  .section-tariffs-content-wrap {
+    height: auto;
+  }
+  .section-tariffs-content-inner {
+    padding-bottom: 40px;
+    justify-content: center;
+  }
+  .section-tariffs-content-bit {
+    margin-bottom: 40px;
+  }
+  .section-tariffs-content-lines {
+    right: 38px;
+  }
+}
+@media screen and (max-width: 824px) {
+  .section-tariffs-content-cards {
+    flex-wrap: wrap;
+  }
+  .section-tariffs-content-cards-card-wrap--blue {
+    margin: 0 auto;
+  }
+  .section-tariffs-content-cards-card__bg-lines {
+    display: none;
+  }
+  .section-tariffs-content-cards-wrap-right {
+    margin-top: 45px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 550px) {
+  .section-tariffs {
+    padding-top: 45px;
+  }
+  .section-tariffs-content-cards-card--gradient {
+    width: 290px;
+    height: 313px;
+  }
+}

@@ -1,0 +1,108 @@
+.section-offers-slider {
+  position: relative;
+  z-index: 3;
+  &-arrows {
+    position: relative;
+    z-index: 3;
+    margin-bottom: 43px;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    &-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 49px;
+      height: 46px;
+      background: linear-gradient(
+        180.81deg,
+        rgba(166, 131, 240, 0.2) 18.91%,
+        rgba(166, 131, 240, 0) 99.3%
+      );
+      border: 1px solid #99a1f0;
+      transition: all 0.5s ease;
+      &__prev {
+        border-radius: 5px 0px 0px 5px;
+        border-width: 1px 0 1px 1px;
+      }
+      &__next {
+        border-radius: 0px 5px 5px 0px;
+      }
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+  &-item {
+    &--first {
+      padding-top: 36px;
+    }
+    &--two {
+      padding-top: 72px;
+    }
+    &--three {
+      padding-top: 0;
+    }
+    &--four {
+      padding-top: 36px;
+    }
+    &--fife {
+      padding-top: 72px;
+    }
+    &-wrap-img {
+      position: relative;
+      background: #2e0e97;
+      &__line {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 8.23px;
+        background: linear-gradient(89.98deg, #ff4fce 4.41%, #0b57d6 90.69%);
+      }
+      &__img {
+        img {
+          max-width: none;
+          width: 100%;
+        }
+      }
+    }
+    &__title {
+      display: block;
+      margin-top: 42px;
+      @include font-exo2;
+      font-size: 22px;
+      font-weight: 700;
+      color: #ffffff;
+      transition: color 0.5s ease;
+      &:hover {
+        color: #9a88dd;
+      }
+    }
+    &__descr {
+      margin-top: 20px;
+      @include font-exo2;
+      font-size: 18px;
+      line-height: 28px;
+      color: #d1cde1;
+    }
+  }
+}
+@media screen and (max-width: 1477px) {
+  .section-offers-slider {
+    width: 800px;
+    &-item__descr {
+      font-size: 15px;
+    }
+  }
+}
+@media screen and (max-width: 1070px) {
+  .section-offers-slider {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .section-offers-slider {
+    width: 270px;
+  }
+}

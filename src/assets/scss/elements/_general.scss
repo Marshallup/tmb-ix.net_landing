@@ -1,0 +1,223 @@
+html {
+  scroll-behavior: auto;
+}
+a {
+  text-decoration: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+}
+.preloader-wrap {
+  width: 100%;
+  height: 100vh;
+  background: #010101;
+  position: absolute;
+  z-index: 1000;
+  transform: translateX(0);
+  // left: 0;
+  transition: transform 1s ease-out 1s;
+}
+.pace {
+  background-clip: padding-box;
+  width: 520px;
+  top: 50%;
+  left: 50%;
+  margin: auto;
+  pointer-events: none;
+  position: fixed;
+  transition: opacity 0.5s ease;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 60px;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  z-index: 9500;
+  transition: all 1s ease;
+  &-progress,
+  &-activity {
+    top: 50%;
+  }
+  &-progress {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #333333;
+    background: linear-gradient(89.98deg, #ff4fce 4.41%, #0b57d6 90.69%);
+    left: -100%;
+    position: absolute;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.1s ease-out;
+    z-index: 20;
+    &::after {
+      color: rgba(255, 255, 255, 0.5);
+      content: attr(data-progress-text);
+      display: inline-block;
+      @include font-play;
+      font-size: 22px;
+      font-weight: 700;
+      font-weight: 200;
+      padding-right: 16px;
+      position: fixed;
+      right: 15px;
+      text-align: right;
+      top: 4px;
+      width: 45px;
+      letter-spacing: 0.02em;
+      color: #454545;
+    }
+  }
+  &-running {
+    overflow: hidden;
+    position: relative;
+  }
+  &-activity {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #333333;
+  }
+  &-done {
+    .pace {
+      opacity: 0;
+    }
+    .preloader-wrap {
+      transform: translateX(-100%);
+    }
+  }
+}
+.lock {
+  position: relative;
+  overflow: hidden;
+}
+
+.section {
+  background-color: #010101;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1477px;
+  @media screen and (max-width: 1070px) {
+    max-width: 900px;
+    padding: 0 20px;
+  }
+}
+.tx-title {
+  @include font-play;
+  font-weight: 400;
+  font-size: 46px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.tx-subtitle {
+  margin: 50px 0 56px 0;
+  @include font-exo2;
+  font-weight: 400;
+  font-size: 18px;
+  color: #9a88dd;
+}
+.tx-button {
+  width: 248px;
+  height: 45px;
+  border: 3px solid #ffffff;
+  @include font-roboto;
+  text-align: center;
+  font-size: 18px;
+  line-height: 34px;
+  color: white;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  &:hover {
+    background-color: white;
+    color: black;
+  }
+}
+.content-lines {
+  &--short,
+  &--long {
+    height: 1px;
+  }
+  &--short {
+    width: 36px;
+  }
+  &--long {
+    margin-top: 18px;
+    width: 134px;
+  }
+}
+.wrap-for-blur {
+  overflow: hidden;
+  position: relative;
+}
+.particles {
+  top: 0;
+  position: fixed;
+  width: 18%;
+  height: 100vh;
+  background-color: transparent;
+  z-index: 3;
+  &-left {
+    left: 0;
+  }
+  &-right {
+    right: 0;
+  }
+}
+@media screen and (max-width: 1758px) {
+  .section-tariffs-content-wrap {
+    z-index: 4 !important;
+  }
+  .section-coop-content-form-wrap {
+    z-index: 4 !important;
+  }
+}
+@media screen and (max-width: 1477px) {
+  .particles {
+    width: 13%;
+  }
+  .section-tariffs-content-wrap {
+    z-index: 1 !important;
+  }
+  .section-coop-content-form-wrap {
+    z-index: 1 !important;
+  }
+}
+@media screen and (max-width: 1204px) {
+  .section-tariffs-content-wrap {
+    z-index: 4 !important;
+  }
+  .section-coop-content-form-wrap {
+    z-index: 4 !important;
+  }
+}
+@media screen and (max-width: 1477px) {
+  .container {
+    max-width: 1070px;
+  }
+  .tx-title {
+    font-size: 31px;
+  }
+  .tx-subtitle {
+    margin: 20px 0;
+  }
+}
+@media screen and (max-width: 550px) {
+  .particles {
+    display: none;
+  }
+  .pace {
+    width: 280px;
+    &-progress {
+      &::after {
+        font-size: 17px;
+      }
+    }
+  }
+}
